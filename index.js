@@ -1,59 +1,13 @@
-var randomNumber1 = Math.floor(Math.random()*6 + 1);
-var randomNumber2 = Math.floor(Math.random()*6 + 1);
+var randomNumber1 = Math.floor(Math.random()*6 + 1); //Random number between 1-6 for dice 1.
+var randomNumber2 = Math.floor(Math.random()*6 + 1); //Random number between 1-6 for dice 2.
 
-switch(randomNumber1){
-  case 1:
-    document.getElementsByTagName("img")[0].setAttribute("src", "images/dice1.png");
-    break;
+var randomImage1 = "images/dice" + randomNumber1 + ".png"; //The random image for dice 1.
+var randomImage2 = "images/dice" + randomNumber2 + ".png"; //The random image for dice 2.
 
-  case 2:
-    document.getElementsByTagName("img")[0].setAttribute("src", "images/dice2.png")
-    break;
+document.getElementsByTagName("img")[0].setAttribute("src", randomImage1); // Change the image.
+document.getElementsByTagName("img")[1].setAttribute("src", randomImage2); // Change the image.
 
-  case 3:
-    document.getElementsByTagName("img")[0].setAttribute("src", "images/dice3.png")
-    break;
-
-  case 4:
-    document.getElementsByTagName("img")[0].setAttribute("src", "images/dice4.png")
-    break;
-
-  case 5:
-    document.getElementsByTagName("img")[0].setAttribute("src", "images/dice5.png")
-    break;
-
-  case 6:
-    document.getElementsByTagName("img")[0].setAttribute("src", "images/dice6.png")
-    break;
-}
-
-switch(randomNumber2){
-  case 1:
-    document.getElementsByTagName("img")[1].setAttribute("src", "images/dice1.png");
-    break;
-
-  case 2:
-    document.getElementsByTagName("img")[1].setAttribute("src", "images/dice2.png")
-    break;
-
-  case 3:
-    document.getElementsByTagName("img")[1].setAttribute("src", "images/dice3.png")
-    break;
-
-  case 4:
-    document.getElementsByTagName("img")[1].setAttribute("src", "images/dice4.png")
-    break;
-
-  case 5:
-    document.getElementsByTagName("img")[1].setAttribute("src", "images/dice5.png")
-    break;
-
-  case 6:
-    document.getElementsByTagName("img")[1].setAttribute("src", "images/dice6.png")
-    break;
-}
-
-if(randomNumber1 > randomNumber2){
+if(randomNumber1 > randomNumber2){ // Change the title and show who wins.
   document.querySelector("h1").textContent = "🏆 Player1 Wins!";
 }
 else if(randomNumber1 < randomNumber2){
