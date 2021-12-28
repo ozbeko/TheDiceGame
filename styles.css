@@ -10,8 +10,21 @@
 
 }
 
+.btn{
+  margin-top: 5rem;
+  color: #4ECCA3;
+  background-color: #A60C02;
+  text-align: center;
+  width: 20%;
+  height: 60px;
+  font-size: 30px;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bolder;
+}
+
 body {
   background-color: #393E46;
+  text-align: center;
 }
 
 h1 {
